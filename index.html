@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <script>
+
+      function convert() {
+        var input = document.getElementById("input").value;
+        if (isNaN(input)) {
+          alert("Veuillez saisir une valeur numérique");
+        } else {
+          var francs = input * 1.092;
+          francs = francs.toFixed(2);
+          document.getElementById("result").innerHTML = input + " RUR = " + francs + " USD";
+        }
+      }
+    </script>
+
+    <h1>Write your EUR Number</h1>
+
+    <div class="box1">
+    <input type="text" id="input" oninput="convert()">
+  
+
+</div>
+
+  <p id="result"></p>
+  </body>
+</html>
